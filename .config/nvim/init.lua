@@ -1,3 +1,9 @@
 require('base')
 require('keymaps')
-require('plugins')
+
+if vim.g.vscode then
+  -- VSCode extension
+else
+  require('plugins')
+end
+
