@@ -1,26 +1,28 @@
-local is_vscode = vim.g.vscode == 1
+local nocode = function()
+  return vim.fn.exists('g:vscode') == 0
+end
 
 return require('packer').startup(function(use)
   use { 
     'wbthomason/packer.nvim',
-    disable = is_vscode
+    cond = { nocode }
   }
   use {
     'nvim-treesitter/nvim-treesitter',
-    disable = is_vscode
+    cond = { nocode }
   }
   use {
     'nvim-telescope/telescope.nvim',
-    disabled = is_vscode,
+    cond = { nocode },
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use {
     'nvim-telescope/telescope-file-browser.nvim',
-    disable = is_vscode
+    cond = { nocode }
   }
   use({
     'projekt0n/github-nvim-theme',
-    disable = is_vscode,
+    cond = { nocode },
     tag = 'v0.0.7',
     config = function()
       require('github-theme').setup({})
@@ -28,7 +30,7 @@ return require('packer').startup(function(use)
   })
   use {
     'neoclide/coc.nvim',
-    disable = is_vscode,
+    cond = { nocode },
     branch = 'release'
   }
 end)

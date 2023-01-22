@@ -3,7 +3,7 @@ if (not status) then return end
 
 ts.setup {
   highlight = {
-    enable = true,
+    enable = vim.fn.exists('g:vscode') == 0,
     disable = {},
   },
   indent = {
