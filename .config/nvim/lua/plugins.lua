@@ -20,14 +20,17 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope-file-browser.nvim',
     cond = { nocode }
   }
-  use({
+  use {
+    'xiyaowong/nvim-transparent'
+  }
+  use {
     'projekt0n/github-nvim-theme',
     cond = { nocode },
     tag = 'v0.0.7',
     config = function()
       require('github-theme').setup({})
     end
-  })
+  }
   use {
     'neoclide/coc.nvim',
     cond = { nocode },
