@@ -35,17 +35,17 @@ config.keys = {
 	{ key = "c", mods = "LEADER", action = action.ActivateCopyMode },
 
 	-- Pane keybingings
-	{ key = "-", mods = "LEADER", action = action.SplitVertical },
-	{ key = "|", mods = "LEADER", action = action.SplitHorizontal },
-	{ key = "h", mods = "LEADER", action = action.ActivatePaneDirection("Left") },
-	{ key = "l", mods = "LEADER", action = action.ActivatePaneDirection("Right") },
-	{ key = "j", mods = "LEADER", action = action.ActivatePaneDirection("Down") },
-	{ key = "k", mods = "LEADER", action = action.ActivatePaneDirection("Up") },
+	{ key = '"', mods = "LEADER", action = action.SplitVertical },
+	{ key = "%", mods = "LEADER", action = action.SplitHorizontal },
+	{ key = "h", mods = "CTRL", action = action.ActivatePaneDirection("Left") },
+	{ key = "l", mods = "CTRL", action = action.ActivatePaneDirection("Right") },
+	{ key = "j", mods = "CTRL", action = action.ActivatePaneDirection("Down") },
+	{ key = "k", mods = "CTRL", action = action.ActivatePaneDirection("Up") },
 
 	-- Tab keybindings
-	{ key = "n", mods = "LEADER", action = action.SpawnTab("CurrentPaneDomain") },
-	{ key = "[", mods = "LEADER", action = action.ActivateTabRelative(-1) },
-	{ key = "]", mods = "LEADER", action = action.ActivateTabRelative(1) },
+	{ key = "c", mods = "LEADER", action = action.SpawnTab("CurrentPaneDomain") },
+	{ key = "p", mods = "LEADER", action = action.ActivateTabRelative(-1) },
+	{ key = "n", mods = "LEADER", action = action.ActivateTabRelative(1) },
 }
 
 -- Tabs
