@@ -1,4 +1,0 @@
-{
-  "coc.preferences.formatOnSaveFiletypes": ["ts", "tsx", "typescript", "typescriptreact"],
-  "eslint.autoFixOnSave": true
-}
